@@ -1,0 +1,81 @@
+####################
+Program Launchers
+####################
+super + Return
+	urxvt
+
+super + space
+	dmenu_run
+
+super + shift + f 
+	firefox
+
+####################
+WM Hotkeys
+####################
+super + alt + Escape
+	bspc quit
+
+# Close window
+super + w
+	bspc node -c
+
+# Rotate tree
+super + r
+	bspc desktop -R 90 
+
+# Flip tree vertically
+super + v
+	bspc desktop -F vertical
+
+# Flip tree vertically
+super + h
+	bspc desktop -F horizontal
+
+# Switch to dvorak mode
+super + d
+    setxkbmap dvp -option caps:swapescape
+
+# Switch to qwerty mode
+super + q
+    setxkbmap us -option caps:swapescape
+
+# Toggle floating and fullscreenn
+super + {s,f}
+	bspc node -t {floating,fullscreen}
+
+# Cycle window focus
+super + {grave,Tab}
+	bspc node -f {prev,next}
+ 
+# Switch desktops and move windows between them
+super + {_,shift + }{1-6}
+	bspc {desktop -f,node -d} ^{1-6}
+
+# Move windows within a desktop
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {left,down,up,right}
+
+# Move and resize windows with the mouse
+super + button{1-3}
+    bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+    bspc pointer -t %i, %i
+
+super + @button{1-3}
+    bspc pointer -u
+
+# Disables pointer following focus
+super + alt + f
+    bspc config pointer_follows_focus false
+
+# Enables pointer following focus
+super + alt + g
+    bspc config pointer_follows_focus true
+
+# Reload sxhkd config
+super + Escape
+	pkill -USR1 -x sxhkd
+ 
+ setxkbmap dvp -option caps:swapescape
