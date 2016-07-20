@@ -1,4 +1,5 @@
-" Show Line Numbers  
+" Show Relative Line Numbers with number on current line by default
+set relativenumber
 set number
 
 " Toggle Paste Mode
@@ -49,3 +50,14 @@ nnoremap <C-H> <C-W><C-J>
 nnoremap <C-T> <C-W><C-K>
 nnoremap <C-N> <C-W><C-L>
 nnoremap <C-D> <C-W><C-H>
+
+" Create toggle for relative line numbering "
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
