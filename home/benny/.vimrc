@@ -23,9 +23,6 @@ autocmd FileType python set colorcolumn=120
 " Change background color of color column 
 highlight ColorColumn ctermbg=241
 
-" Change background color of fold
-highlight Folded ctermbg=241
-
 " Dvorak Keybindings
 no d h
 no h j
