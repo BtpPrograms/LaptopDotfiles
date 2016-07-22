@@ -22,7 +22,9 @@ xset r rate 200 20
 xset s off -dpms
 xset s off
 setxkbmap us -option caps:swapescape
-sh ~/.fehbg
+
+# Set desktop background
+feh --bg-scale '/home/benny/Wallpapers/CloudyMountains.png'
 
 # Disable PC Speaker
 xset -b
