@@ -74,3 +74,4 @@ super + d
 super + q
     setxkbmap us -option caps:swapescape
 
+setxkbmap dvp -option caps:swapescape
