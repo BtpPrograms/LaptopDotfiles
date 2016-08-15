@@ -16,3 +16,4 @@ man() {
 # Alias ls to always use colors
 alias ls="ls --color=always"
 
+export SUDO_EDITOR=/usr/bin/vim
